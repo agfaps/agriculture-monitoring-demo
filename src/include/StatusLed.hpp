@@ -3,6 +3,7 @@
 
 #include "HAL_GPIO.hpp"
 #include <memory>
+#include <iostream>
 
 class StatusLed {
 public:
