@@ -3,6 +3,7 @@
 
 #include "AgricultureMonitoring.hpp"
 // #include "hw_module.hpp"
+#include "LedGpio.hpp"
 #include "StatusLed.hpp"
 // #include "display_host.hpp"
 // #include "mqtt_host.hpp"
@@ -13,7 +14,8 @@ int main(void)
 {
     // Create instances of platform-specific implementations
     // auto hwModule     = createHwModule(); // Factory function for HwModule
-    auto statusLed    = std::make_unique<StatusLed>();
+    auto ledGpio      = std::make_unique<LedGpio>();
+    auto statusLed    = std::make_unique<StatusLed>(std::move(ledGpio));
     // auto display      = std::make_unique<Display_Host>();
     // auto mqtt         = std::make_unique<Mqtt_Host>();
     // auto soilMoisture = std::make_unique<SoilMoisture_Host>();

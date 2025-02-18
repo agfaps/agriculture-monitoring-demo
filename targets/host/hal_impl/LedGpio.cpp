@@ -1,30 +1,22 @@
-#include "HAL_GPIO.hpp"
+#include "LedGpio.hpp"
 #include <iostream>
 
-class LedGpio : public HAL_GPIO
+
+void LedGpio::init()
 {
-public:
-    void init() override
-    {
-        std::cout << "LedGpio::init" << std::endl;
-    }
-    void set(bool state) override
-    {
+    std::cout << "LedGpio::init" << std::endl;
+}
+void LedGpio::set(bool state) 
+{
 
-        std::cout << "LedGpio::set: " << (state ? "ON" : "OFF") << std::endl;
-    }
-    bool read() override
-    {
-        std::cout << "LedGpio::read" << std::endl;
-        return false;
-    }
-    void mode(HAL_GPIO_MODE mode) override
-    {
-        std::cout << "LedGpio::mode" << std::endl;
-    }
-};
-
-// Factory function
-HAL_GPIO* createHalGpio() {
-    return new LedGpio();
+    std::cout << "LedGpio::set: " << (state ? "ON" : "OFF") << std::endl;
+}
+bool LedGpio::read() 
+{
+    std::cout << "LedGpio::read" << std::endl;
+    return false;
+}
+void LedGpio::mode(HAL_GPIO_MODE mode) 
+{
+    std::cout << "LedGpio::mode" << std::endl;
 }

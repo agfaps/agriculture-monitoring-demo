@@ -2,15 +2,16 @@
 #define STATUS_LED_HPP
 
 #include "HAL_GPIO.hpp"
+#include <memory>
 
 class StatusLed {
 public:
-    StatusLed();
+    StatusLed(std::unique_ptr<HAL_GPIO> gpioLed) : gpioLed(std::move(gpioLed)) {};
     void init();
     void set(bool state);
     ~StatusLed() = default;
 private:
-    HAL_GPIO* gpioLed;
+    std::unique_ptr<HAL_GPIO> gpioLed;
 };
 
 #endif // STATUS_LED_HPP

@@ -32,6 +32,7 @@ target_link_libraries(host_simulator osal_lib)
 target_include_directories(host_simulator PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../src/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../src/hal
+    ${CMAKE_CURRENT_SOURCE_DIR}/hal_impl
 )
 
 # Set C++ standard (C++17 or later)

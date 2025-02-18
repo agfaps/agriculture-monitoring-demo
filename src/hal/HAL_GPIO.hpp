@@ -14,7 +14,4 @@ public:
     virtual ~HAL_GPIO() = default;        // Virtual destructor for proper cleanup
 };
 
-// Factory function to get platform-specific LED connected to GPIO driver
-HAL_GPIO* createHalGpio();
-
 #endif // HAL_GPIO
