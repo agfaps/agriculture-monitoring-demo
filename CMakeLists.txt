@@ -11,3 +11,4 @@ endif()
 
 # Add target-specific directory
 add_subdirectory(targets/${TARGET_PLATFORM})
+add_subdirectory(tests)
