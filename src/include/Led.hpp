@@ -6,7 +6,7 @@
 
 class Led {
 public:
-    Led(std::unique_ptr<ILedHardware> ledHardware) : ledHardware_(std::move(ledHardware)) {}
+    explicit Led(std::unique_ptr<ILedHardware> ledHardware) : ledHardware_(std::move(ledHardware)), state_(false) {}
 
     virtual ~Led() = default;
 

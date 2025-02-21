@@ -1,6 +1,6 @@
 #include "ConnectivityLed.hpp"
 
-ConnectivityLed::ConnectivityLed(std::unique_ptr<ILedHardware> ledHardware) : Led(std::move(ledHardware)) {}
+ConnectivityLed::ConnectivityLed(std::unique_ptr<ILedHardware> ledHardware) : Led(std::move(ledHardware)), connectionActive_(false) {}
 
 void ConnectivityLed::setConnectionStatus(bool connected) {
     connectionActive_ = connected;

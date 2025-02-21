@@ -18,5 +18,5 @@ bool LedGpio::read()
 }
 void LedGpio::mode(HAL_GPIO_MODE mode) 
 {
-    std::cout << "LedGpio::mode" << std::endl;
+    std::cout << "LedGpio::mode: "<< (mode == HAL_GPIO_MODE::OUTPUT ? "OUTPUT" : "INPUT") << std::endl;
 }

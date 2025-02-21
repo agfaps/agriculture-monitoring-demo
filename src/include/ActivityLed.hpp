@@ -5,7 +5,7 @@
 
 class ActivityLed : public Led {
 public:
-    ActivityLed(std::unique_ptr<ILedHardware> ledHardware);
+    explicit ActivityLed(std::unique_ptr<ILedHardware> ledHardware);
 
     void pulseActivity();   // we can implement enum ActivityState::Enabled, ActivityState::Disabled for more expressive API
     void update();

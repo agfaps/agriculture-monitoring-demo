@@ -5,7 +5,7 @@
 
 class ConnectivityLed : public Led {
 public:
-    ConnectivityLed(std::unique_ptr<ILedHardware> ledHardware);
+    explicit ConnectivityLed(std::unique_ptr<ILedHardware> ledHardware);
 
     void setConnectionStatus(bool connected);
     bool isConnected() const;

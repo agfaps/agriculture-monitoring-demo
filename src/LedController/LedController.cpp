@@ -2,10 +2,7 @@
 
 LedController::LedController(
     std::unique_ptr<ActivityLed> activityLed, 
-    std::unique_ptr<ConnectivityLed> connectivityLed) {
-        activityLed_ = std::move(activityLed);
-        connectivityLed_ = std::move(connectivityLed);
-}
+    std::unique_ptr<ConnectivityLed> connectivityLed) : activityLed_(std::move(activityLed)), connectivityLed_(std::move(connectivityLed)) {}
 
 void LedController::setConnected(bool connected) {
     connectivityLed_->setConnectionStatus(connected);

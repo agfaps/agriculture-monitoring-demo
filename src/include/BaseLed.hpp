@@ -9,7 +9,8 @@ class BaseLed {
 public:
     BaseLed(std::unique_ptr<HAL_GPIO> gpioLed, const std::string& name) : 
         gpioLed_(std::move(gpioLed)), 
-        name_(name) {}
+        name_(name),
+        state_(false) {}
     
     virtual ~BaseLed() = default;
 
