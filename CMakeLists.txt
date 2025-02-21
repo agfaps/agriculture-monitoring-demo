@@ -10,7 +10,7 @@ set(CMAKE_C_STANDARD 17)
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     option(CODE_COVERAGE "Enable code coverage" ON)
     # Set common warnings for all files
-    add_compile_options(-Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wunused -Wcast-align -Wcast-qual)
+    add_compile_options(-Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wunused -Wcast-align -Wcast-qual -Werror)
 
     # Set C++-specific warnings
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast -Wzero-as-null-pointer-constant")
