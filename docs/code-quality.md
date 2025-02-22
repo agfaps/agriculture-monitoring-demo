@@ -142,6 +142,10 @@ Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc 
 Run your tests using Valgrind to check for memory issues.
 
 ```sh
+sudo apt  install valgrind
+```
+
+```sh
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./unit/StatusLed/StatusLedTests
 ```
 
