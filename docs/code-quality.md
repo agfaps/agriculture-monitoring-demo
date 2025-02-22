@@ -149,6 +149,10 @@ sudo apt  install valgrind
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./unit/StatusLed/StatusLedTests
 ```
 
+AddressSanitizer as Valgrind partner
+
+Article [link](https://hackerbikepacker.com/sanitizers)
+
 ## 4. CodeQL Static Analysis Locally
 
 you can run CodeQL locally without GitHub Actions.
