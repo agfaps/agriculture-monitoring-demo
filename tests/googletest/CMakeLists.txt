@@ -25,6 +25,7 @@ target_include_directories(
 
 # Set C++ standard (C++17 or later)
 set_target_properties(gtest_gmock_lib PROPERTIES
+    COMPILE_FLAGS "-Wno-zero-as-null-pointer-constant"
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     CXX_EXTENSIONS OFF

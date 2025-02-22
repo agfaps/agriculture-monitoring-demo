@@ -7,12 +7,12 @@
 
 class StatusLed {
 public:
-    StatusLed(std::unique_ptr<HAL_GPIO> gpioLed) : gpioLed(std::move(gpioLed)) {};
+   explicit StatusLed(std::unique_ptr<HAL_GPIO> gpioLed) : gpioLed_(std::move(gpioLed)) {};
     void init();
     void set(bool state);
     ~StatusLed() = default;
 private:
-    std::unique_ptr<HAL_GPIO> gpioLed;
+    std::unique_ptr<HAL_GPIO> gpioLed_;
 };
 
 #endif // STATUS_LED_HPP
