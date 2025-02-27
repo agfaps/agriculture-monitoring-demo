@@ -7,7 +7,7 @@ project(osal_lib LANGUAGES C)
 # Determine source file based on platform at configure time
 if(TARGET_PLATFORM STREQUAL "esp32" OR TARGET_PLATFORM STREQUAL "esp32-s3")
     set(OSAL_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/freertos/osal_freertos.c)
-elseif(TARGET_PLATFORM STREQUAL "host")
+elseif(TARGET_PLATFORM STREQUAL "host" OR TARGET_PLATFORM STREQUAL "host-test")
     set(OSAL_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/posix/osal_posix.c)
 endif()
 

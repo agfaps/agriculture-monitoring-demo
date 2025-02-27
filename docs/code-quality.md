@@ -1,11 +1,6 @@
 # Code Quality
 
-hmm.. interesting to see coverage analysis, cyclomatic complexity check, run using valgrind to check memory leak, and if possible add CodeQL from github locally (we run the test locally without github actions, etc).
-
-ChatGPT said:
-Memory updated
-
-That's a great set of tools for improving code quality! Here's how you can integrate each of them into your local development workflow:
+A great set of tools for improving code quality and here's how you can integrate each of them into your local development workflow:
 
 ## 1. Coverage Analysis (gcov & lcov)
 
@@ -52,12 +47,9 @@ genhtml coverage.info --output-directory coverage_report
 Go to `coverage_report` folder, right click index.html and choose `Show Preview`.  
 You might need Extension: `Live Preview` from Microsoft.
 
-Check this [link](https://chatgpt.com/c/67b83126-7a0c-800b-b98a-7f063b411e92) for automating coverage tests and put minimum thresold.
-
 ## 2. Cyclomatic Complexity Analysis (~~cppcheck~~ -> lizard)
 
 EDIT: use lizard.  
-[HISTORY](https://chatgpt.com/c/67b83dc4-86e8-800b-8186-a4171c256d4e)
 
 ### Install lizard
 
@@ -148,6 +140,10 @@ sudo apt  install valgrind
 ```sh
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./unit/StatusLed/StatusLedTests
 ```
+
+AddressSanitizer as Valgrind partner
+
+Article [link](https://hackerbikepacker.com/sanitizers)
 
 ## 4. CodeQL Static Analysis Locally
 
@@ -413,5 +409,3 @@ Security and performance
 Documentation and testing
 
 Collaboration and maintainability
-
-Let me know if you need further details on any of these tools or practices!
